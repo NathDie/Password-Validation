@@ -1,0 +1,20 @@
+name: Password Validator Workflows
+run-name: Try to run
+on:
+  push:
+    branches: master
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+
+      - name: Install dependances
+        run: npm ci
+
+      - name: Tests launch
+        run: npm test
+
+      - name: Success tests
+        run: echo "Win"
