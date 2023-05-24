@@ -22,6 +22,6 @@ describe("Password UI", () => {
         btn.dispatchEvent(new Event("click"));
 
         let title = document.getElementById("title");
-        expect(title.textContent).toBe(["Le mot de passe doit comporter au moins 8 caractères"]);
+        expect(title.textContent).toBe("Le mot de passe doit comporter au moins 8 caractères");
     });
 });
